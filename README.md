@@ -104,3 +104,55 @@ System.out.println(before - after + "ns")
 
 ### Which should you use?
 Current Time Millis is a reliable method for recording runtime but algorithms may run too fast for Current Time Millis to handle. Nano Time is more reliable for faster algoritms.
+
+## How to write data to a file
+
+Sometimes you may want to write to a file when experimenting with datasets. For example, you may want to record the Current Iteration and Fitness of a solution in a Hill Climbing algorithm to measure how quickly the algorithm reaches a convergent plain.
+
+### How to make a file
+```java
+import java.io.File;  // Import the File class
+import java.io.IOException;  // Import the IOException class to handle errors
+
+public class myClass
+    public static void main(String[] args) {
+        myMethod();
+    }
+    private static void myMethod() {
+        try {
+            File myObj = new File("filename.txt");
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+            } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
+
+### How to write a file
+```java
+import java.io.File;  // Import the File class
+import java.io.IOException;  // Import the IOException class to handle errors
+
+public class myClass
+    public static void main(String[] args) {
+        myMethod();
+    }
+    private static void myMethod() {
+        try {
+            FileWriter myWriter = new FileWriter("filename.txt");
+            myWriter.write("Files in Java might be tricky, but it is fun enough!");
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
