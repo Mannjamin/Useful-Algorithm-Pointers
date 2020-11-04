@@ -7,6 +7,7 @@
 1.  How to print an array to console
 2.  How to measure the runtime of an algorithm
 3.  How to write data to file
+4.  Debugging Java Code in Eclipse
 
 ## How to print an array to console
 
@@ -38,7 +39,7 @@ To print an array, we need to do the following.
 
 ```Java
 for (int index = 0; i < n; ++i) {
-
+    // Code Goes Here
 }
 ```
 
@@ -148,7 +149,7 @@ public class myClass
         try {
             FileWriter myWriter = new FileWriter("filename.txt");
             myWriter.write("Files in Java might be tricky, but it is fun enough!");
-            myWriter.close();
+            myWriter.close();ls
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
@@ -157,3 +158,18 @@ public class myClass
     }
 }
 ```
+
+## Debugging Java Code in Eclipse
+
+Regardless of how complex an algorithm is, everybody makes mistakes when writing code. Whether it be a simple typo, wrong data type or more, it is good practice to learn how to debug code when it goes wrong. This paragraph covers the following:
+
+1.  How to use the Debug Tools in Eclipse
+2.  How to use Logging in Java
+
+### How to use the Debug Tools in Eclipse
+
+#### How to enter the Debug Mode
+
+When you run your code in Elipse, you press the green button with a leftward facing white arrow.
+
+![Run Code in Eclipse](./refs/eclipse-01.png)
