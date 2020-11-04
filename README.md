@@ -170,6 +170,39 @@ Regardless of how complex an algorithm is, everybody makes mistakes when writing
 
 #### How to enter the Debug Mode
 
-When you run your code in Elipse, you press the green button with a leftward facing white arrow.
+When you run your code in Elipse, you press the green button with a right facing white arrow.
 
 ![Run Code in Eclipse](./refs/eclipse-01.png)
+
+To run an application in Debug Mode, press the white down facing arrow next to the green bug, press Run As, and select Java Application. This will bring up a pop-up similar to the image below asking you to switch perspectives to Debug Mode:
+
+![Debug Mode](./refs/elipse-02.png)
+
+There are 3 important compontents to Eclipse Debug Mode.
+
+##### Debug Perspective
+
+![Debug Perspective 1](./refs/eclipse-04.png)
+
+The first component is the Perspective, when you run a class for the first time, you will see nothing aside from the image above. To view more content, you need to use Break Points. Break Points are a feature in most IDE's where you can stop the code at a specific point during it's run to record current values. Take for example the following code, if we put a Break Point on line 11, we will be able to see the current values of `i`, `j`, and `val`. We will also start seeing more information in the Debug Perspective of where the Break Points are, and what method they are in, and where the method is called. 
+
+```java
+package myPackage;
+public class myClass {
+	public static void main(String[] args) {
+		myMethod();
+	}
+	public static void myMethod() {
+		int val = 0;
+		for (int i = 0; i < 10; ++i) {
+			val++;
+			for (int j = 0; j < 10; ++j) {
+				val++;
+			}
+		}
+		System.out.println(val);
+	}
+}
+```
+
+![Debug Perspective 2](./refs/eclipse-03.png)
