@@ -1,4 +1,4 @@
-# Algorithms 101 - How to Research Algorithms
+# Algorithms 101 - How to Research Algorithms (WORK IN PROGRESS NOT COMPLETE)
 
 ## Three useful tools for researching Algorithm
 
